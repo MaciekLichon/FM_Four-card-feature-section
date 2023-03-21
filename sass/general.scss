@@ -1,0 +1,16 @@
+@import './variables.scss';
+
+body {
+  font-family: $ff-regular;
+  font-size: $fs-regular;
+  font-weight: $fw-regular;
+  color: $clr-dark;
+  background-color: $clr-light;
+
+  padding: 0 2rem;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}

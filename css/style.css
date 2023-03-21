@@ -1,0 +1,208 @@
+/* COLORS */
+/* TYPE */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.77;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* COLORS */
+/* TYPE */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.813rem;
+  font-weight: 400;
+  color: #4d4f62;
+  background-color: #fafafa;
+  padding: 0 2rem;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.hero {
+  padding-top: 5.313rem;
+  padding-bottom: 4.75rem;
+  text-align: center;
+}
+
+.hero .hero__title {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.17px;
+  margin-bottom: 1rem;
+}
+
+.hero .hero__title span {
+  font-weight: 200;
+}
+
+.hero .hero__description {
+  font-size: 0.938rem;
+  line-height: 1.67;
+  letter-spacing: 0.1;
+  opacity: 0.5;
+}
+
+.tiles {
+  padding-bottom: 4.875rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+
+.tile {
+  padding: 1.75rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.tile::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.tile.tile-cyan::after {
+  background-color: #44d3d2;
+}
+
+.tile.tile-red::after {
+  background-color: #ea5454;
+}
+
+.tile.tile-orange::after {
+  background-color: #fcae4a;
+}
+
+.tile.tile-blue::after {
+  background-color: #549ef2;
+}
+
+.tile .tile__title {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.tile .tile__description {
+  letter-spacing: 0.09px;
+  opacity: 0.5;
+}
+
+.tile .tile__button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 2rem;
+  height: 57px;
+  width: 57px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .hero .hero__title {
+    font-size: 2.25rem;
+    letter-spacing: 0.25px;
+  }
+  .tiles {
+    display: flex;
+    gap: 1.875rem;
+    padding-bottom: 5rem;
+  }
+  .tiles .column {
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 0;
+    gap: 1.875rem;
+  }
+  .tile {
+    padding: 2rem;
+  }
+  .tile .tile__title {
+    margin-bottom: 0.375rem;
+  }
+  .tile .tile__button {
+    margin-top: 2.5rem;
+    height: auto;
+    width: auto;
+    bottom: 0;
+  }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvdmFyaWFibGVzLnNjc3MiLCIuLi9zYXNzL3Jlc2V0LnNjc3MiLCJzdHlsZS5jc3MiLCIuLi9zYXNzL2dlbmVyYWwuc2NzcyIsIi4uL3Nhc3Mvc3R5bGUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQSxXQUFBO0FBV0EsU0FBQTtBQ1pBOztDQ0lDO0FEREQ7RUFDRSxzQkFBc0I7QUNHeEI7O0FEREE7O0NDS0M7QURGRDtFQUNFLFNBQVM7QUNJWDs7QURGQTs7Q0NNQztBREhEO0VBQ0UsWUFBWTtBQ0tkOztBREhBOzs7O0NDU0M7QURKRDtFQUNFLGlCQUFpQjtFQUNqQixtQ0FBbUM7QUNNckM7O0FESkE7O0NDUUM7QURMRDtFQUNFLGNBQWM7RUFDZCxlQUFlO0FDT2pCOztBRExBOztDQ1NDO0FETkQ7RUFDRSxhQUFhO0FDUWY7O0FETkE7O0NDVUM7QURQRDtFQUNFLHlCQUF5QjtBQ1MzQjs7QURQQTs7Q0NXQztBRFJEO0VBQ0Usa0JBQWtCO0FDVXBCOztBRjNEQSxXQUFBO0FBV0EsU0FBQTtBR1ZBO0VBQ0Usa0NIVWdDO0VHVGhDLG1CSFdtQjtFR1ZuQixnQkhtQmM7RUdsQmQsY0hHNEI7RUdGNUIseUJIQ2dDO0VHQ2hDLGVBQWU7QUQ4RGpCOztBQzNEQTtFQUNFLGlCQUFpQjtFQUNqQixjQUFjO0FEOERoQjs7QUV4RUE7RUFDRSxxQkFBcUI7RUFDckIsdUJBQXVCO0VBQ3ZCLGtCQUFrQjtBRjJFcEI7O0FFOUVBO0VBTUksaUJKTWM7RUlMZCxnQkpnQlc7RUlmWCxnQkphUztFSVpULHNCQUFzQjtFQUN0QixtQkFBbUI7QUY0RXZCOztBRXRGQTtFQVlXLGdCSk9HO0FFdUVkOztBRTFGQTtFQWdCSSxtQkpGZ0I7RUlHaEIsaUJKT1k7RUlOWixtQkFBbUI7RUFDbkIsWUFBWTtBRjhFaEI7O0FFMUVBO0VBQ0Usd0JBQXdCO0FGNkUxQjs7QUUxRUE7RUFHRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLHFCQUpZO0VBS1osV0FMWTtBRmdGZDs7QUV4RUE7RUFDRSxnQkFBZ0I7RUFDaEIsdUJKeENnQztFSXlDaEMsa0JBQWtCO0VBQ2xCLHdEQUF3RDtFQUN4RCxhQUFhO0VBQ2Isc0JBQXNCO0VBRXRCLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUYwRWxCOztBRW5GQTtFQVlJLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsTUFBTTtFQUNOLE9BQU87RUFDUCxXQUFXO0VBQ1gsV0FBVztBRjJFZjs7QUU1RkE7RUFvQnVCLHlCSnZEUztBRW1JaEM7O0FFaEdBO0VBcUJzQix5QkoxRFE7QUV5STlCOztBRXBHQTtFQXNCeUIseUJKMURTO0FFNElsQzs7QUV4R0E7RUF1QnVCLHlCSnpEUztBRThJaEM7O0FFNUdBO0VBMEJJLGtCSmpEa0I7RUlrRGxCLGdCSnhDVztFSXlDWCxnQkozQ1M7QUVpSWI7O0FFbEhBO0VBZ0NJLHNCQUFzQjtFQUN0QixZQUFZO0FGc0ZoQjs7QUV2SEE7RUFxQ0ksWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixVQUFVO0VBQ1YsZUFBZTtFQUNmLG9CQUFvQjtFQUNwQixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLFdBQVc7QUZzRmY7O0FFbEZBO0VBQ0U7SUFDRSxpQkFBaUI7SUFDakIsb0JBQW9CO0lBQ3BCLGdCQUFnQjtJQUNoQixjQUFjO0VGcUZoQjtFRXpGQTtJQU9JLGtCSjVFcUI7SUk2RXJCLHNCQUFzQjtFRnFGMUI7RUVqRkE7SUFFRSxhQUFhO0lBQ2IsYUFGYztJQUdkLG9CQUFvQjtFRmtGdEI7RUV0RkE7SUFPSSxPQUFPO0lBQ1AsdUJBQXVCO0lBQ3ZCLGdCQUFnQjtJQUNoQixhQVRZO0VGMkZoQjtFRTlFQTtJQUNFLGFBQWE7RUZnRmY7RUVqRkE7SUFPaUIsdUJBQXVCO0VGNkV4QztFRXBGQTtJQVNJLGtCQUFrQjtJQUNsQixZQUFZO0lBQ1osV0FBVztJQUNYLFNBQVM7RUY4RWI7QUFDRiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
